@@ -118,7 +118,7 @@ if (
 
     const botReply =
       data?.choices?.[0]?.message?.content ||
-      "I prefer not to respond to that.";
+      "Your message puzzled even a clever fox. Try again or pick one of the options below.";
 
     res.json({ reply: botReply });
     console.log("MODEL RAW RESPONSE:", data?.choices?.[0]?.message?.message);
