@@ -12,6 +12,8 @@ let conversationHistory = [];
 
 const app = express();
 
+app.set("trust proxy", 1);   // <<< ΠΡΟΣΘΗΚΗ
+
 /* ============================
    1) SECURITY MIDDLEWARE
    ============================ */
