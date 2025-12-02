@@ -21,6 +21,17 @@ app.set("trust proxy", 1);   // <<< ΠΡΟΣΘΗΚΗ
 // HTTP security headers
 app.use(helmet());
 
+
+app.use(
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      "img-src": ["'self'", "data:", "https://spitfoxitservices.com"],
+    },
+  })
+);
+
+
 // basic XSS προστασία σε body/query/headers
 app.use(xssClean());
 
